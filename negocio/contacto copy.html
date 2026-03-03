@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto</title>
+<style>
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #80d66a;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #e69ff0;
+    color: rgb(0, 0, 0);
+}
+
+/* ===== CONTENEDOR IMAGEN + TEXTO ===== */
+.contenedor {
+    display: flex;
+    gap: 20px; /* espacio entre imagen y texto */
+    padding: 30px;
+}
+
+.contenedor img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 10px;
+    transition: filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contenedor img:hover {
+    box-shadow: 0 0 20px rgba(183, 0, 255, 0.616); /* resplandor verde suave */
+}
+h1 {
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+a {
+    color: #80d66a;
+    text-decoration: none;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        align-items: center; /* centrar contenido */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .contenedor img {
+        width: auto;       /* mantener proporción real */
+        max-width: 100%;   /* que no se pase del contenedor */
+        height: auto;      /* conservar altura proporcional */
+    }
+}
+.insta{
+color: #e69ff0;
+
+
+
+}
+
+h2{
+font-size: 45px;}
+
+.fondo-hojas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    background: linear-gradient(to bottom, #326b24, #80d66a);
+}
+
+/* Base hojas visibles */
+.hoja {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: rgba(144, 238, 144, 0.7);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 0 5px rgba(255,255,255,0.2);
+    animation: caer linear infinite;
+}
+
+/* Posiciones y velocidades distintas */
+.hoja1 { left: 5%; animation-duration: 10s; animation-delay: 0s; }
+.hoja2 { left: 15%; animation-duration: 12s; animation-delay: 2s; }
+.hoja3 { left: 25%; animation-duration: 9s; animation-delay: 1s; }
+.hoja4 { left: 35%; animation-duration: 11s; animation-delay: 3s; }
+.hoja5 { left: 50%; animation-duration: 10s; animation-delay: 0.5s; }
+.hoja6 { left: 60%; animation-duration: 13s; animation-delay: 2s; }
+.hoja7 { left: 70%; animation-duration: 9s; animation-delay: 1s; }
+.hoja8 { left: 80%; animation-duration: 12s; animation-delay: 3s; }
+.hoja9 { left: 90%; animation-duration: 10s; animation-delay: 0s; }
+
+/* Animación de caída más larga */
+@keyframes caer {
+    0% { transform: translateY(-80px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    50% { transform: translateY(80vh) rotate(45deg); opacity: 0.7; }
+    100% { transform: translateY(120vh) rotate(90deg); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<div class="contenedor">
+    <img src="fundador.png" alt="">
+    <h1>
+        Espero les haya gustado nuestros productos y puedan elegir libremente
+        sus preferencias. Para más información contáctanos por 
+        <a href="https://wa.me/8098799208?text=Hola%20quiero%20información" target="_blank">WhatsApp</a>
+        o en 
+        <a class="insta" href="https://www.instagram.com/aromasdeaquird" target="_blank">Instagram</a>.
+
+        <p>Gracias por preferir nuestros productos y colaborar en la empresa 😊💗</p>
+    </h1>
+</div>
+<h2>Nuestra fundadora Kismet Montserrat De la Cruz, quien 
+        nos brindo el apoyo y productos de buena calidad
+        hechos 100% en casa. Agradecemos sus esfuerzos por brindar tan
+        buena atención al cliente todo el tiempo y ofreciendonos
+        una empresa especializada en complacer a sus clientes con
+        el paladar, la alegria de casa y la hermosura de la 
+        naturaleza...
+    
+    </h2>
+<div class="fondo-hojas">
+    <div class="hoja hoja1"></div>
+    <div class="hoja hoja2"></div>
+    <div class="hoja hoja3"></div>
+    <div class="hoja hoja4"></div>
+    <div class="hoja hoja5"></div>
+    <div class="hoja hoja6"></div>
+    <div class="hoja hoja7"></div>
+    <div class="hoja hoja8"></div>
+    <div class="hoja hoja9"></div>
+</div>
+<footer>
+    © 2026 EcoDulce
+</footer>
+
+</body>
+</html>

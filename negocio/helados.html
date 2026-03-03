@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #326b24;
+}
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #80d66a;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav input {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+nav button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ===== CONTENEDOR DE TARJETAS ===== */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    justify-items: center;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+/* ===== TARJETA ===== */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(190, 110, 243, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 20px;
+}
+
+.card button {
+    background: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background: #1ebe5d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #e69ff0;
+    color: rgb(0, 0, 0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 18px;
+    }
+    nav input {
+        width: 150px;
+    }
+    nav button {
+        font-size: 14px;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card p {
+        font-size: 18px;
+    }
+    .card button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+    nav a {
+        font-size: 16px;
+    }
+    nav input {
+        width: 90%;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    .card p {
+        font-size: 16px;
+    }
+    .card button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+    <input type="text" placeholder="Buscar productos...">
+    <button>Buscar</button>
+</nav>
+
+<section class="container">
+
+    <div class="card">
+        <h3>Aves Tropicales</h3>
+        <img src="choco-helado.jpeg" alt="Aves Tropicales">
+        <p>$25</p>
+        <button onclick="enviarWhatsApp('Aves Tropicales')">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h3>Plantas Tropicales</h3>
+        <img src="freca-choco.jpeg" alt="Plantas Tropicales">
+        <p>$25</p>
+        <button onclick="enviarWhatsApp('Plantas Tropicales')">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h3>Helados Caseros</h3>
+        <img src="" alt="Helados Caseros">
+        <p>$25</p>
+        <button onclick="enviarWhatsApp('Helados Caseros')">Comprar</button>
+    </div>
+
+    <div class="card">
+        <h3>Velas Artesanales</h3>
+        <img src="vela.jpeg" alt="Velas Artesanales">
+        <p>$500</p>
+        <button onclick="enviarWhatsApp('Velas Artesanales')">Comprar</button>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 EcoDulce
+</footer>
+
+<script>
+function enviarWhatsApp(producto) {
+    // Cambia el número por tu WhatsApp (sin + ni guiones)
+    const numero = "8098799208";
+    const mensaje = `Hola, estoy interesado en el producto: ${producto}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

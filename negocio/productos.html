@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #326b24;
+}
+ button {
+            background: #000000;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+/* ===== NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #80d66a;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* ===== GRID ===== */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== CARDS ===== */
+.aves, .plantas, .helados, .velas {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(190, 110, 243, 0.1);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.aves { background-image: url(fondo.png); }
+.plantas { background-image: url(plant.webp); }
+.helados { background-image: url(frutas.png); }
+.velas { background-image: url(velas-perfil.jpg); }
+
+h3 {
+    font-size: 30px;
+    color: white;
+}
+
+p {
+    font-size: 30px;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px white;
+    transition: 0.3s;
+}
+
+img:hover {
+    box-shadow: 8px 4px 4px 8px black;
+}
+
+/* BOTONES */
+a {
+    display: inline-block;
+    background: #000000;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+input {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+    nav a {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p, a, button {
+        font-size: 22px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p, a, button {
+        font-size: 18px;
+    }
+
+    input {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 220px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+    
+</nav>
+
+<section class="container">
+    <div class="aves">
+        <h3>Aves Tropicales</h3>
+        <img src="perfil-ave.jpeg" alt="">
+        <p></p>
+        <a href="aves.html">Ver Productos</a>
+    </div>
+
+    <div class="plantas">
+        <h3>Plantas Tropicales</h3>
+        <img src="plantas.jpeg" alt="">
+        <p></p>
+        <a href="plantas.html">Ver Productos</a>
+    </div>
+
+    <div class="helados">
+        <h3>Helados Caseros</h3>
+        <img src="helados.jpeg" alt="">
+        <p></p>
+        <a href="helados.html">Ver Productos</a>
+    </div>
+
+    <div class="velas">
+        <h3>Velas Artesanales</h3>
+        <img src="velas-perfil (3).jpeg" alt="">
+        <p></p>
+        <a href="velas.html">Ver Productos</a>
+    </div>
+</section>
+
+</body>
+</html>

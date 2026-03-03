@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDulce</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #326b24;
+        }
+
+        header {
+            color: white;
+            background-image: url(plant.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 15px;
+            position: relative; /* IMPORTANTE para que absolute funcione */
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #80d66a;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(190, 110, 243, 0.1);
+            text-align: center;
+        }
+
+        button {
+            background: #000000;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #e69ff0;
+            color: rgb(0, 0, 0);
+        }
+
+        img {
+            width: 200px;
+            border-radius: 20px;
+        }
+
+        /* ===== LOGO ===== */
+
+        .logo {
+            width: 390px;
+            height: auto;
+        }
+
+        #letraeco {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        #ecodulce {
+            width: 1000px;
+            max-width: 90%;
+            height: auto;
+            margin-top: 75px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        a {
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 768px) {
+
+            .logo {
+                width: 250px;
+            }
+
+            #ecodulce {
+                width: 600px;
+                max-width: 90%;
+                margin-top: 40px;
+            }
+        }
+
+        /* ===== CELULAR ===== */
+        @media (max-width: 480px) {
+
+            .logo {
+                width: 180px;
+            }
+
+            #ecodulce {
+                width: 350px;
+                max-width: 95%;
+                margin-top: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            p, a, h3 {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logouwu">
+            <img class="logo" src="logo_Y_verde_transparente.png" alt="Logo">
+        </div>
+
+        <div id="letraeco">
+            <img id="ecodulce" src="ChatGPT Image 24 feb 2026, 14_25_26.png" alt="Eco Dulce">
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section class="container">
+        <div class="card">
+            <h3>Aves Tropicales</h3>
+            <img src="aves.jpeg" alt="">
+            <p>$750</p>
+            <button onclick="agregar()">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Plantas Tropicales</h3>
+            <img src="plantas.jpeg" alt="">
+            <p>$300</p>
+            <button onclick="agregar()">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Helados Caseros</h3>
+            <img src="helados.jpeg" alt="">
+            <p>$25</p>
+            <button onclick="agregar()">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Velas Artesanales</h3>
+            <img src="vela.jpeg" alt="">
+            <p>$500</p>
+            <button onclick="agregar()">Comprar</button>
+        </div>
+
+        <div class="card">
+            <h3>Velas Artesanales</h3>
+            <img src="vela.2.jpeg" alt="">
+            <p>$500</p>
+            <button onclick="agregar()">Comprar</button>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 EcoDulce
+    </footer>
+
+    <script>
+        function agregar() {
+            alert("Producto agregado al carrito");
+        }
+    </script>
+
+</body>
+
+</html>
